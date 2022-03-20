@@ -1,0 +1,43 @@
+﻿<Window x:Class="WpfXMLReader01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXMLReader01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Column="0" Content="Wczyta XML" HorizontalAlignment="Left" Margin="0,23,0,0" Grid.Row="2" VerticalAlignment="Top" Name="ButtonXmlRead" Click="ButtonXmlRead_Click"/>
+        <ListView Grid.Row="2" Name="ListaXml" Margin="0,0,0,20" Grid.Column="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Menu Grid.Column="0" Grid.ColumnSpan="2" FontSize="14">
+            <MenuItem Header="_Plik">
+
+                <MenuItem Header="_Zamknij" Name="close_app_button" Click="close_app_button_Click"/>
+
+            </MenuItem>
+            <MenuItem Header="_XML">
+                <MenuItem Header="_Data_Grid" Name="button_data_grid" Click="button_data_grid_Click" />
+
+            </MenuItem>
+        </Menu>
+        <Label Grid.Column="1" Content="Wczytywanie pliku XML do komponentu ListBox" HorizontalAlignment="Left" Margin="10,9,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
